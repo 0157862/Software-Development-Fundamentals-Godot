@@ -8,4 +8,4 @@ func _ready():
 
 func _physics_process(delta):
 # warning-ignore:unused_variable
-	var _collidedObject = move_and_collide(Vector2(0, -speed*delta))
+	var collidedObject = move_and_collide(Vector2(0, -speed*delta))
