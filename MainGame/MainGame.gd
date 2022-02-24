@@ -14,6 +14,3 @@ func _ready():
 		currentTimer = currentTimer - 1
 		print(currentTimer)
 	print("Game Over")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
