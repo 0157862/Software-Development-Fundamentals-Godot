@@ -37,6 +37,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CurrentScoreLabel" type="Label" parent="HUD"]
+margin_left = 4.0
+margin_top = 13.0
+margin_right = 94.0
+margin_bottom = 27.0
+text = "Current Score:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentScore" type="Label" parent="HUD"]
+margin_left = 98.0
+margin_top = 13.0
+margin_right = 106.0
+margin_bottom = 27.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Border_Left" type="Area2D" parent="." groups=[
 "left",
 ]]
@@ -54,6 +74,17 @@ position = Vector2( 1287.42, 368.711 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
 position = Vector2( -6.6694, -0.768158 )
 shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Border_Right/CollisionShape2D"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Border_Right/CollisionShape2D/Label"]
+margin_right = 40.0
+margin_bottom = 14.0
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 642.94, 669.056 )
