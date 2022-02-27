@@ -5,6 +5,7 @@ var currentTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	set_process(true)
 	currentTimer = countdownMax
 	$HUD/Countdown.text = str(currentTimer)
 	
@@ -14,3 +15,6 @@ func _ready():
 		currentTimer = currentTimer - 1
 		print(currentTimer)
 	print("Game Over")
+
+func _process(delta):
+	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
