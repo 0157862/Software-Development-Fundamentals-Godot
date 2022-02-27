@@ -57,6 +57,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="HighScoreLabel" type="Label" parent="HUD"]
+margin_left = 110.0
+margin_top = 13.0
+margin_right = 178.0
+margin_bottom = 27.0
+text = "Highscore:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScore" type="Label" parent="HUD"]
+margin_left = 182.0
+margin_top = 13.0
+margin_right = 182.0
+margin_bottom = 27.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Border_Left" type="Area2D" parent="." groups=[
 "left",
 ]]
