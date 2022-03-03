@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -11,6 +11,9 @@ extents = Vector2( 20.9622, 380.576 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 662.058, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 380.822 )
 
 [node name="SpaceInvaders" type="Control"]
 margin_left = 1.0
@@ -233,3 +236,21 @@ position = Vector2( -472.219, 404.428 )
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
 autoplay = true
+
+[node name="Border_Left2" type="Area2D" parent="." groups=[
+"left",
+]]
+position = Vector2( -4.16254, 369.438 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left2"]
+position = Vector2( -3.17337, -14.2801 )
+shape = SubResource( 3 )
+
+[node name="Border_Right2" type="Area2D" parent="." groups=[
+"right",
+]]
+position = Vector2( 1274.7, 358.331 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right2"]
+position = Vector2( 11.1067, 3.17346 )
+shape = SubResource( 3 )
